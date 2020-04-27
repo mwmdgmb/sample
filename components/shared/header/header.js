@@ -10,7 +10,7 @@ import {
   Button
 } from "reactstrap";
 import { isOpenMenu, isDropdown } from "../../../redux/menu/menu-actions";
-import { } from '../../../redux/cart/cart-actions';
+import {} from "../../../redux/cart/cart-actions";
 import { isLoginAction } from "../../../redux/login/login-actions";
 import { connect } from "react-redux";
 import DropdownCart from "../../DropdownCart";
@@ -46,7 +46,7 @@ const Headers = ({
                 </Button>
               )}
               <NavItem className="d-flex flex-row justify-content-between align-items-baseline">
-                <NavLink href="/">سبد خرید</NavLink>
+                <NavLink onClick={dropdownCart}>سبد خرید</NavLink>
                 <BadgeItems dropdownCart={dropdownCart} />
                 {isDropdown ? <DropdownCart /> : null}
               </NavItem>
